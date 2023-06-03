@@ -71,6 +71,7 @@ function App(): JSX.Element {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
+       <Text>kesa diaa</Text>
       </ScrollView>
     </SafeAreaView>
   );
