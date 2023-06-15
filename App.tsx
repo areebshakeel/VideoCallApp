@@ -24,6 +24,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import AppNavigation from './components/Navigation';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -63,24 +64,15 @@ function App(): JSX.Element {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-       <Text>kesa diaa</Text>
-      </ScrollView>
+    <SafeAreaView style={styles.sectionContainer}>
+     <AppNavigation/>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+   flex:1
   },
   sectionTitle: {
     fontSize: 24,
